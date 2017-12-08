@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Template</title>
+	<style>
+		body {
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-template-rows: 1fr 4fr 1fr;
+			grid-gap: 20px;
+			background: #344583;
+		}
+		canvas {
+			grid-column: 2;
+			grid-row: 2;
+		}
+		#control-panel {
+			grid-column: 2;
+			grid-row: 3;
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+		}
+		#control-panel button{
+			grid-row: 2;
+		}
+		h1{
+			color: white;
+			grid-column: 2;
+			text-align: center; 
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1>Conways Game of Life</h1>
+	<canvas></canvas>
+	<div id="control-panel">
+		<input id="speed" type="range" max="10" min="1">
+		<button id="play">Play</button>
+		<button id="stop">Stop</button>
+		<button id="clear">Clear</button>
+	</div>
+	<script src="js/canvas.bundle.js"></script>
+</body>
+</html>
